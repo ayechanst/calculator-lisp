@@ -14,8 +14,10 @@
 (calculate 'sub 2 5)
 
 
+(defun leap-year-p (year)
+  (if (eq (mod year 4) 0)
+      (if (not (eq (mod year 100) 0))
+          (if (eq (mod year 400) 0)
+              "is leap year"))) "is leap year")
 
-(defun two-fer (&optional name)
-  (if name (format "One for %s, one for me." name) "One for you, one for me."))
-
-(two-fer "Alice")
+(leap-year-p 1996)
