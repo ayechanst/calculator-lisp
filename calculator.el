@@ -12,3 +12,10 @@
         ((eq fn 'sub) (sub a b))))
 
 (calculate 'sub 2 5)
+
+
+
+(defun two-fer (&optional name)
+  (if name (format "One for %s, one for me." name) "One for you, one for me."))
+
+(two-fer "Alice")
